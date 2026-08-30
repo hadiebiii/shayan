@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اطلس تعاملی بافت‌شناسی و بیومکانیک پوسیدگی عاج دندان</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Vazirmatn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Vazirmatn', 'sans-serif'],
+                    },
+                    colors: {
+                        dentin: {
+                            infected: '#ef4444',
+                            affected: '#f59e0b',
+                            sclerotic: '#38bdf8',
+                            tertiary: '#a855f7',
+                            sound: '#10b981',
+                            pulp: '#f43f5e'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #0b0f19;
+            color: #f1f5f9;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glow-pulse {
+            animation: pulse-glow 3s infinite;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 0.9; transform: scale(1.02); }
+        }
+        .tubule-gradient {
+            background: linear-gradient(180deg, rgba(239, 68, 68, 0.3) 0%, rgba(245, 158, 11, 0.25) 30%, rgba(56, 189, 248, 0.2) 65%, rgba(168, 85, 247, 0.25) 90%, rgba(244, 63, 94, 0.35) 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-900">
+
+    <!-- Top Navigation / Hero -->
+    <header class="border-b border-slate-800/80 bg-slate-900/80 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-lg shadow-cyan-500/20">
+                    <i class="fa-solid fa-tooth text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-base sm:text-lg text-white">اطلس هیستوپاتولوژی عاج دندان</h1>
+                    <p class="text-xs text-slate-400 hidden sm:block">بررسی میکروسکوپی دمینرالیزاسیون، پاسخ پالپ و رمینرالیزاسیون</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-950/80 text-cyan-400 border border-cyan-800/60">
+                    <i class="fa-solid fa-microscope text-xs"></i> نگارش تشخیصی - بالینی
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 space-y-12">
+
+        <!-- Hero Mental Model Banner -->
+        <section class="relative overflow-hidden rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-slate-900 via-indigo-950/40 to-slate-900 border border-indigo-500/20 shadow-2xl">
+            <div class="absolute -right-20 -top-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -left-20 -bottom-20 w-72 h-72 bg-rose-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="relative z-10 max-w-4xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-medium mb-4">
+                    <i class="fa-solid fa-lightbulb"></i> مفهوم بنیادین و تصویرسازی ذهنی
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-4 leading-relaxed">
+                    عاج دندان چیست؟ <span class="text-transparent bg-clip-text bg-gradient-to-l from-cyan-400 to-blue-400">یک شبکه لوله‌کشی متراکم درون بتن مسلح!</span>
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
+                    ساختار عاج متشکل از میلیون‌ها مجرای میکروسکوپی (توبول) است که از مرز اتاقک پالپ به سمت مینا کشیده شده‌اند. هنگامی که پوسیدگی به عاج نفوذ می‌کند، این ساختار واکنش‌های فیزیولوژیک، دفاعی و تخریبی زنجیره‌واری را در طول این لوله‌ها رقم می‌زند.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 1: Micro-Architecture (Peritubular vs Intertubular) -->
+        <section class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold">۱</div>
+                    <h3 class="text-xl font-bold text-white">معماری پایه: عاج پریتوبولار در برابر اینترتوبولار</h3>
+                </div>
+                <span class="text-xs text-slate-400">برش مقطعی توبول (Cross-Section)</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                <!-- SVG Visual Cross Section -->
+                <div class="lg:col-span-6 glass-panel rounded-2xl p-6 flex flex-col items-center justify-center border border-slate-800">
+                    <div class="text-center mb-4">
+                        <span class="text-xs font-semibold text-cyan-400 tracking-wider">نقشه شماتیک اولترااستراکچر یک توبول عاجی</span>
+                    </div>
+
+                    <!-- Micro-cross section SVG -->
+                    <div class="w-full max-w-sm aspect-square relative flex items-center justify-center">
+                        <svg viewBox="0 0 400 400" class="w-full h-full drop-shadow-xl select-none">
+                            <!-- Background: Intertubular Dentin -->
+                            <rect x="10" y="10" width="380" height="380" rx="28" fill="#1e293b" stroke="#334155" stroke-width="3"/>
+                            
+                            <!-- Collagen Matrix Pattern (Intertubular) -->
+                            <pattern id="collagenMesh" width="20" height="20" patternUnits="userSpaceOnUse">
+                                <path d="M 0 10 L 20 10 M 10 0 L 10 20" fill="none" stroke="#475569" stroke-width="1" opacity="0.6"/>
+                                <circle cx="5" cy="5" r="1.5" fill="#38bdf8" opacity="0.7"/>
+                                <circle cx="15" cy="15" r="1.5" fill="#38bdf8" opacity="0.7"/>
+                            </pattern>
+                            <rect x="10" y="10" width="380" height="380" rx="28" fill="url(#collagenMesh)"/>
+
+                            <!-- Peritubular Dentin (Dense Mineralized Collar - No Collagen) -->
+                            <circle cx="200" cy="200" r="130" fill="#0284c7" fill-opacity="0.25" stroke="#38bdf8" stroke-width="8" stroke-dasharray="6 2"/>
+                            
+                            <!-- Tubule Lumen (Center Space) -->
+                            <circle cx="200" cy="200" r="70" fill="#0f172a" stroke="#64748b" stroke-width="4"/>
+                            
+                            <!-- Odontoblastic Process / Dentinal Fluid in Lumen -->
+                            <circle cx="200" cy="200" r="42" fill="url(#pulpGlow)" stroke="#f43f5e" stroke-width="3"/>
+                            
+                            <!-- Gradients -->
+                            <defs>
+                                <radialGradient id="pulpGlow" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.9"/>
+                                    <stop offset="100%" stop-color="#e11d48" stop-opacity="0.4"/>
+                                </radialGradient>
+                            </defs>
+
+                            <!-- Labels in SVG -->
+                            <text x="200" y="204" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle" font-family="Vazirmatn">مجرای لومن</text>
+                            <text x="200" y="220" font-size="8.5" fill="#cbd5e1" text-anchor="middle" font-family="Vazirmatn">(زائده ادونتوبلاست)</text>
+
+                            <!-- Dimension pointers -->
+                            <line x1="200" y1="70" x2="200" y2="35" stroke="#38bdf8" stroke-width="2"/>
+                            <text x="200" y="28" font-size="11" font-weight="bold" fill="#38bdf8" text-anchor="middle" font-family="Vazirmatn">عاج پریتوبولار (جداره فوق معدنی)</text>
+
+                            <line x1="330" y1="200" x2="375" y2="200" stroke="#94a3b8" stroke-width="2"/>
+                            <text x="310" y="360" font-size="12" font-weight="bold" fill="#cbd5e1" text-anchor="middle" font-family="Vazirmatn">عاج اینترتوبولار (ماتریکس کلاژنی)</text>
+                        </svg>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap justify-center gap-3 text-xs">
+                        <span class="flex items-center gap-1.5 text-slate-300">
+                            <span class="w-3 h-3 rounded bg-slate-700 border border-slate-500"></span> اینترتوبولار (بتن مسلح)
+                        </span>
+                        <span class="flex items-center gap-1.5 text-cyan-300">
+                            <span class="w-3 h-3 rounded bg-cyan-500 border border-cyan-300"></span> پریتوبولار (حلقه سرامیکی)
+                        </span>
+                        <span class="flex items-center gap-1.5 text-rose-300">
+                            <span class="w-3 h-3 rounded bg-rose-500 border border-rose-300"></span> زائده سلولی / لومن
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Structured Comparison Cards -->
+                <div class="lg:col-span-6 space-y-4">
+                    <!-- Peritubular Card -->
+                    <div class="glass-panel p-5 rounded-2xl border-l-4 border-l-cyan-400 transition-all hover:bg-slate-900/90">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-circle-notch text-cyan-400"></i>
+                                <h4 class="font-bold text-cyan-300 text-base">عاج پریتوبولار (Peritubular Dentin)</h4>
+                            </div>
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-cyan-950 text-cyan-400 border border-cyan-800">۹۵٪ معدنی</span>
+                        </div>
+                        <ul class="text-xs sm:text-sm text-slate-300 space-y-2 leading-relaxed">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-shield-halved text-cyan-400 mt-1 text-xs"></i>
+                                <span><strong>ساختار:</strong> دیواره داخلی هر لوله؛ بافتی فوق‌العاده متراکم و هایپرمینرالیزه که <strong>تقریباً فاقد داربست کلاژنی</strong> است.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-triangle-exclamation text-amber-400 mt-1 text-xs"></i>
+                                <span><strong>حساسیت به اسید:</strong> به دلیل کربنات بالا و فقدان کلاژن، در برخورد با اسید باکتریایی <strong>بسیار سریع حل و باز می‌شود</strong>.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-bullseye text-cyan-400 mt-1 text-xs"></i>
+                                <span><strong>نقش بیومکانیک:</strong> استحکام‌بخشی محوری به لبه لوله‌ها و جلوگیری از کلاپس تحت نیرو.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Intertubular Card -->
+                    <div class="glass-panel p-5 rounded-2xl border-l-4 border-l-blue-500 transition-all hover:bg-slate-900/90">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-cubes-stacked text-blue-400"></i>
+                                <h4 class="font-bold text-blue-300 text-base">عاج اینترتوبولار (Intertubular Dentin)</h4>
+                            </div>
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-950 text-blue-400 border border-blue-800">بتن آرمه زیستی</span>
+                        </div>
+                        <ul class="text-xs sm:text-sm text-slate-300 space-y-2 leading-relaxed">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-dna text-blue-400 mt-1 text-xs"></i>
+                                <span><strong>ترکیب:</strong> ماتریکس متراکم از <strong>فیبرهای کلاژن نوع ۱</strong> که کریستال‌های آپاتیت درون آن کاشته شده‌اند.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-arrows-spin text-blue-400 mt-1 text-xs"></i>
+                                <span><strong>انعطاف و الاستیسیته:</strong> جذب تنش‌های آکلوزالی و جلوگیری از خرد شدن مینای شکننده رویین.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-rotate text-emerald-400 mt-1 text-xs"></i>
+                                <span><strong>نقش در ترمیم:</strong> داربست اصلی جهت <strong>رمینرالیزاسیون و ایجاد لایه هیبرید</strong> در فرآیند باندینگ دندانپزشکی.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Stratigraphy of Dentin Caries Layers (Interactive Explorer) -->
+        <section class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold">۲</div>
+                    <h3 class="text-xl font-bold text-white">لایه‌بندی بالینی و آسیب‌شناسی پوسیدگی عاج</h3>
+                </div>
+                <span class="text-xs text-indigo-400 animate-pulse">روی لایه‌ها کلیک کنید</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <!-- Interactive Vertical Cross-section Column -->
+                <div class="lg:col-span-5 space-y-3">
+                    <div class="text-xs font-semibold text-slate-400 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-arrow-down-long text-red-400"></i>
+                        <span>جهت پیشروی از سطح مینا به سمت پالپ چمبر:</span>
+                    </div>
+
+                    <!-- Layer 1: Infected -->
+                    <button onclick="selectLayer('infected')" id="btn-infected" class="w-full text-right p-4 rounded-2xl border-2 border-red-500/60 bg-red-950/40 hover:bg-red-900/50 transition-all flex items-center justify-between shadow-lg shadow-red-950/30">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-xl bg-red-500 text-white flex items-center justify-center font-bold text-sm shadow">۱</div>
+                            <div>
+                                <h5 class="font-bold text-red-200 text-sm sm:text-base">عاج آلوده (Infected Dentin)</h5>
+                                <p class="text-xs text-red-400">عاج نرم (Soft) • کلاژن تخریب‌شده • مملو از باکتری</p>
+                            </div>
+                        </div>
+                        <span class="px-2 py-1 rounded-md text-xs font-bold bg-red-500 text-white">حذف حتمی</span>
+                    </button>
+
+                    <!-- Layer 2: Affected -->
+                    <button onclick="selectLayer('affected')" id="btn-affected" class="w-full text-right p-4 rounded-2xl border border-amber-500/30 bg-amber-950/20 hover:bg-amber-900/30 transition-all flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center font-bold text-sm shadow">۲</div>
+                            <div>
+                                <h5 class="font-bold text-amber-200 text-sm sm:text-base">عاج متأثر (Affected Dentin)</h5>
+                                <p class="text-xs text-amber-400">عاج سفت/چرمی (Firm/Leathery) • کلاژن سالم</p>
+                            </div>
+                        </div>
+                        <span class="px-2 py-1 rounded-md text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">قابل نگهداری</span>
+                    </button>
+
+                    <!-- Layer 3: Sclerotic -->
+                    <button onclick="selectLayer('sclerotic')" id="btn-sclerotic" class="w-full text-right p-4 rounded-2xl border border-sky-500/30 bg-sky-950/20 hover:bg-sky-900/30 transition-all flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-xl bg-sky-500 text-slate-950 flex items-center justify-center font-bold text-sm shadow">۳</div>
+                            <div>
+                                <h5 class="font-bold text-sky-200 text-sm sm:text-base">عاج اسکلروتیک واکنشی (Sclerotic)</h5>
+                                <p class="text-xs text-sky-400">ناحیه ترنسلوسنت شیشه‌ای • انسداد توبول‌ها با کریستال</p>
+                            </div>
+                        </div>
+                        <span class="px-2 py-1 rounded-md text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-500/40">سد نفوذ</span>
+                    </button>
+
+                    <!-- Layer 4: Tertiary -->
+                    <button onclick="selectLayer('tertiary')" id="btn-tertiary" class="w-full text-right p-4 rounded-2xl border border-purple-500/30 bg-purple-950/20 hover:bg-purple-900/30 transition-all flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-xl bg-purple-500 text-white flex items-center justify-center font-bold text-sm shadow">۴</div>
+                            <div>
+                                <h5 class="font-bold text-purple-200 text-sm sm:text-base">عاج ثالثیه (Tertiary Dentin)</h5>
+                                <p class="text-xs text-purple-400">واکنشی (Reactionary) و ترمیمی (Reparative)</p>
+                            </div>
+                        </div>
+                        <span class="px-2 py-1 rounded-md text-xs font-bold bg-purple-500/20 text-purple-300 border border-purple-500/40">خط دفاع پالپ</span>
+                    </button>
+
+                    <!-- Pulp chamber base -->
+                    <div class="w-full p-3 rounded-2xl border border-rose-500/20 bg-rose-950/20 flex items-center justify-between text-rose-300 text-xs">
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-heart-pulse text-rose-400"></i> اتاقک پالپ دندان (عروق، اعصاب و ادونتوبلاست‌ها)</span>
+                        <span class="font-mono text-[11px] text-rose-400">مغز دندان</span>
+                    </div>
+                </div>
+
+                <!-- Detailed Layer Inspector Display -->
+                <div class="lg:col-span-7 glass-panel rounded-3xl p-6 sm:p-7 border border-slate-700 flex flex-col justify-between" id="layer-details-box">
+                    <!-- Populated dynamically via JavaScript -->
+                    <div id="inspector-content">
+                        <!-- Default state is populated by JS on init -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Deep Visual Comparison (Infected vs Affected) -->
+        <section class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">۳</div>
+                    <h3 class="text-xl font-bold text-white">تصویرسازی و تفاوت ساختاری: Infected در برابر Affected</h3>
+                </div>
+                <span class="text-xs text-slate-400">تمثیل مهندسی سازه</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Infected Card -->
+                <div class="glass-panel rounded-3xl p-6 border border-red-500/30 bg-gradient-to-b from-red-950/30 to-slate-900 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-400 border border-red-500/40">
+                                <i class="fa-solid fa-skull-crossbones"></i> عاج آلوده (Infected Dentin)
+                            </span>
+                            <span class="text-xs font-bold text-red-400">بافت غیرقابل احیا</span>
+                        </div>
+
+                        <!-- Analogy box -->
+                        <div class="p-4 rounded-2xl bg-red-950/50 border border-red-800/40 mb-4">
+                            <div class="flex items-center gap-2 text-red-300 font-bold text-sm mb-1">
+                                <i class="fa-solid fa-fire"></i> تصویر ذهنی: آتش‌سوزی در اسکلت فلزی ساختمان
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                دیواری که آتش گرفته و علاوه بر سوختن گچ، **تیرآهن‌ها و اسکلت فلزی‌اش نیز ذوب و خاکستر شده است**. هیچ سازه‌ای برای بازسازی وجود ندارد!
+                            </p>
+                        </div>
+
+                        <div class="space-y-3 text-xs sm:text-sm text-slate-300">
+                            <div class="flex items-start gap-2">
+                                <i class="fa-solid fa-xmark text-red-400 mt-1"></i>
+                                <span><strong>وضعیت کلاژن:</strong> ساختار مارپیچ سه‌گانه کلاژن توسط آنزیم‌های باکتریایی و ماتریکس متالوپروتئینازها (MMPs) کاملاً هیدرولیز، دناتوره و شکسته شده است.</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i class="fa-solid fa-bacterium text-red-400 mt-1"></i>
+                                <span><strong>بار میکروبی:</strong> توبول‌ها پر از بیوفیلم فعال و کلونی باکتری‌های اسیدساز و پروتئولیتیک هستند.</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i class="fa-solid fa-ban text-red-400 mt-1"></i>
+                                <span><strong>قابلیت رمینرالیزاسیون:</strong> <span class="text-red-400 font-bold">صفر!</span> چون هیچ الگوی کلاژنی برای نشستن یون‌های کلسیم و فسفات وجود ندارد.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-red-500/20 flex items-center justify-between text-xs font-bold text-red-400">
+                        <span>تصمیم کلینیکی:</span>
+                        <span class="bg-red-500 text-white px-3 py-1 rounded-lg">تراش و حذف کامل با ابزار دستی یا فرز</span>
+                    </div>
+                </div>
+
+                <!-- Affected Card -->
+                <div class="glass-panel rounded-3xl p-6 border border-amber-500/30 bg-gradient-to-b from-amber-950/30 to-slate-900 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-400 border border-amber-500/40">
+                                <i class="fa-solid fa-seedling"></i> عاج متأثر (Affected Dentin)
+                            </span>
+                            <span class="text-xs font-bold text-emerald-400">بافت نجات‌پذیر</span>
+                        </div>
+
+                        <!-- Analogy box -->
+                        <div class="p-4 rounded-2xl bg-amber-950/50 border border-amber-800/40 mb-4">
+                            <div class="flex items-center gap-2 text-amber-300 font-bold text-sm mb-1">
+                                <i class="fa-solid fa-house-chimney-crack"></i> تصویر ذهنی: ریختن گچ دیوار در اثر رطوبت
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                دیواری که گچ آن به خاطر رطوبت ریخته، اما **تیرآهن‌ها و اسکلت فلزی آن کاملاً استوار و سالم سر جای خود باقی مانده‌اند**. فقط کافی است دوباره گچ‌کاری شود!
+                            </p>
+                        </div>
+
+                        <div class="space-y-3 text-xs sm:text-sm text-slate-300">
+                            <div class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                                <span><strong>وضعیت کلاژن:</strong> اتصالات متقاطع داربست کلاژنی نوع ۱ کاملاً **دست‌نخورده و سالم** است و ساختار سه‌بعدی خود را حفظ کرده است.</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i class="fa-solid fa-shield-virus text-emerald-400 mt-1"></i>
+                                <span><strong>بار میکروبی:</strong> باکتری در آن حضور ندارد یا تعداد آن بسیار ناچیز است (فاقد تهاجم عمیق باکتری).</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i class="fa-solid fa-wand-magic-sparkles text-emerald-400 mt-1"></i>
+                                <span><strong>قابلیت رمینرالیزاسیون:</strong> <span class="text-emerald-400 font-bold">بسیار بالا!</span> کلاژن سالم به عنوان شابلون و هسته‌زا عمل می‌کند.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-amber-500/20 flex items-center justify-between text-xs font-bold text-amber-400">
+                        <span>تصمیم کلینیکی:</span>
+                        <span class="bg-amber-500 text-slate-950 px-3 py-1 rounded-lg">حفظ لایه جهت محافظت از پالپ و باندینگ</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Biological Defensive Barriers -->
+        <section class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold">۴</div>
+                    <h3 class="text-xl font-bold text-white">سدهای دفاعی بیولوژیک: عاج اسکلروتیک در برابر عاج ثالثیه</h3>
+                </div>
+                <span class="text-xs text-slate-400">پاسخ‌های اختصاصی کمپلکس عاج-پالپ</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Sclerotic Dentin Defense -->
+                <div class="glass-panel p-6 rounded-3xl border border-sky-500/30 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <h4 class="font-bold text-lg text-sky-300 flex items-center gap-2">
+                                <i class="fa-solid fa-gem text-sky-400"></i>
+                                عاج اسکلروز واکنشی (Reactive Sclerotic / Translucent)
+                            </h4>
+                            <span class="text-xs px-2.5 py-1 bg-sky-950 text-sky-300 rounded-full border border-sky-800">مهر و موم لوله‌ها</span>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed text-justify">
+                            در اثر تحریک ملایم ناشی از نفوذ اسید به عمق، ادونتوبلاست‌ها مقادیر فراوانی یون کلسیم و فسفات را به شکل بلورهای معدنی (نظیر کریستال‌های ویتلوکیت) به داخل مجرای لوله‌ها رسوب می‌دهند.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-3 pt-2">
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800 text-xs">
+                                <span class="text-slate-400 block mb-1 font-semibold">محل استقرار:</span>
+                                <span class="text-sky-300 font-medium">درون لومن توبول‌های زیرین عاج متأثر</span>
+                            </div>
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800 text-xs">
+                                <span class="text-slate-400 block mb-1 font-semibold">نتیجه بافتی:</span>
+                                <span class="text-sky-300 font-medium">انسداد لومن و نمای شفاف در زیر میکروسکوپ</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-sky-950/40 rounded-xl border border-sky-800/40 text-xs text-sky-200">
+                            <strong>مکانیزم محافظتی:</strong> بستن ترافیک لوله‌ها مانع حرکت مایع توبولی، کاهش شدید نفوذپذیری (Permeability) عاج و جلوگیری از رسیدن سموم به پالپ می‌شود.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tertiary Dentin Defense -->
+                <div class="glass-panel p-6 rounded-3xl border border-purple-500/30 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <h4 class="font-bold text-lg text-purple-300 flex items-center gap-2">
+                                <i class="fa-solid fa-shield-cat text-purple-400"></i>
+                                عاج ثالثیه (Tertiary Dentin)
+                            </h4>
+                            <span class="text-xs px-2.5 py-1 bg-purple-950 text-purple-300 rounded-full border border-purple-800">سنگربندی در کف پالپ</span>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed text-justify">
+                            لایه عاجی جدیدی که مستقیماً در **سطح مشترک پالپ و عاج** (کف یا سقف اتاقک پالپ) در پاسخ به تخریب و استرس موضعی ساخته می‌شود تا فاصله میان بافت زنده پالپ و ضایعه را افزایش دهد.
+                        </p>
+
+                        <!-- Two Types Breakdown -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                            <div class="bg-purple-950/30 p-3.5 rounded-xl border border-purple-800/40 text-xs">
+                                <div class="font-bold text-purple-300 mb-1 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-circle-check text-purple-400"></i> ۱. عاج واکنشی (Reactionary)
+                                </div>
+                                <p class="text-slate-300 text-[11px] leading-relaxed">
+                                    تحریک **ملایم تا متوسط**. ادونتوبلاست‌های اولیه زنده مانده و عاجی با **ساختار لوله‌ای منظم** می‌سازند.
+                                </p>
+                            </div>
+                            <div class="bg-purple-950/30 p-3.5 rounded-xl border border-purple-800/40 text-xs">
+                                <div class="font-bold text-purple-300 mb-1 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-triangle-exclamation text-amber-400"></i> ۲. عاج ترمیمی (Reparative)
+                                </div>
+                                <p class="text-slate-300 text-[11px] leading-relaxed">
+                                    تحریک **شدید** که منجر به **مرگ ادونتوبلاست‌ها** می‌شود؛ سلول‌های مزانشیمی پالپ تمایز یافته و عاجی **بی‌نظم و شبه‌استخوانی** می‌سازند.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-purple-950/40 rounded-xl border border-purple-800/40 text-xs text-purple-200">
+                            <strong>هدف بالینی:</strong> ایجاد ضخامت اضافه جهت دور کردن عصب دندان از خط نفوذ باکتری‌ها و اسید.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Demineralization vs Remineralization Flowchart -->
+        <section class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">۵</div>
+                    <h3 class="text-xl font-bold text-white">پویایی دمینرالیزاسیون و رمینرالیزاسیون: چرایی و چگونگی</h3>
+                </div>
+                <span class="text-xs text-emerald-400">مکانیسم بیوشیمیایی</span>
+            </div>
+
+            <!-- Dynamic Interactive Workflow Diagram -->
+            <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-700">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+
+                    <!-- Step 1: Acid Attack & Demineralization -->
+                    <div class="relative bg-slate-900/90 rounded-2xl p-5 border border-red-500/30 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center mb-3 font-bold">
+                                <i class="fa-solid fa-flask-vial"></i>
+                            </div>
+                            <h4 class="font-bold text-red-300 text-base mb-2">۱. حمله اسید و دمینرالیزاسیون</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                اسیدهای باکتریایی به داخل توبول نفوذ کرده و ابتدا <strong class="text-cyan-300">عاج پریتوبولار</strong> (به دلیل عدم وجود کلاژن) و سپس <strong class="text-blue-300">عاج اینترتوبولار</strong> را حل می‌کنند.
+                            </p>
+                        </div>
+                        <div class="mt-4 p-2.5 rounded-lg bg-red-950/40 border border-red-800/40 text-[11px] text-red-300">
+                            فعال‌سازی آنزیم‌های MMPs عاجی در pH اسیدی
+                        </div>
+                    </div>
+
+                    <!-- Step 2: The Critical Divergence Fork -->
+                    <div class="relative bg-slate-900/90 rounded-2xl p-5 border border-amber-500/30 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-3 font-bold">
+                                <i class="fa-solid fa-code-fork"></i>
+                            </div>
+                            <h4 class="font-bold text-amber-300 text-base mb-2">۲. دو راهی سرنوشت‌ساز کلاژن</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                **در عاج آلوده:** کلاژن خرد و تجزیه می‌شود.<br>
+                                **در عاج متأثر و اسکلروتیک:** فقط مواد معدنی شسته شده‌اند و چارچوب مارپیچی کلاژن کاملاً سالم است.
+                            </p>
+                        </div>
+                        <div class="mt-4 p-2.5 rounded-lg bg-amber-950/40 border border-amber-800/40 text-[11px] text-amber-300">
+                            کلاژن = شابلون و قالب نشستن یون‌های معدنی
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Remineralization Capacity -->
+                    <div class="relative bg-slate-900/90 rounded-2xl p-5 border border-emerald-500/30 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-3 font-bold">
+                                <i class="fa-solid fa-rotate"></i>
+                            </div>
+                            <h4 class="font-bold text-emerald-300 text-base mb-2">۳. رمینرالیزاسیون و ترمیم</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                در حضور بزاق و مواد درمانی (کلسیم، فسفات، فلوراید)، یون‌ها بر روی کلاژن سالم عاج متأثر و داخل توبول‌های اسکلروتیک هسته‌زایی (Nucleation) می‌کنند.
+                            </p>
+                        </div>
+                        <div class="mt-4 p-2.5 rounded-lg bg-emerald-950/40 border border-emerald-800/40 text-[11px] text-emerald-300">
+                            احیای ساختار معدنی و سخت‌شدن مجدد عاج
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Summary Callout -->
+                <div class="mt-6 p-4 rounded-2xl bg-slate-950 border border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold shrink-0">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                        <span class="text-slate-300">
+                            <strong>قانون کلیدی رمینرالیزاسیون:</strong> بدون داربست کلاژن سالم، هیچ بلوری نمی‌تواند آرایش کریستالی منظمی به خود بگیرد؛ به همین دلیل عاج اینفکتد هرگز رمینرالیزه نخواهد شد.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Comprehensive Comparison Table -->
+        <section class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold">۶</div>
+                    <h3 class="text-xl font-bold text-white">جدول مقایسه جامع و ماتریس ساختاری عاج‌ها</h3>
+                </div>
+                <span class="text-xs text-slate-400">مرجع آزمون‌های جامع دندانپزشکی</span>
+            </div>
+
+            <div class="overflow-x-auto rounded-2xl border border-slate-800">
+                <table class="w-full text-right text-xs sm:text-sm">
+                    <thead class="bg-slate-900/90 text-slate-300 border-b border-slate-800">
+                        <tr>
+                            <th class="p-3.5 font-bold">نام ساختار</th>
+                            <th class="p-3.5 font-bold">محتوای معدنی (Ca / P)</th>
+                            <th class="p-3.5 font-bold">یکپارچگی کلاژن</th>
+                            <th class="p-3.5 font-bold">حضور باکتری</th>
+                            <th class="p-3.5 font-bold">قابلیت رمینرالیزاسیون</th>
+                            <th class="p-3.5 font-bold">نقش بالینی / فیزیولوژیک</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/60 bg-slate-900/40 text-slate-200">
+                        <tr class="hover:bg-slate-800/40 transition-colors">
+                            <td class="p-3.5 font-bold text-cyan-300 flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span> عاج پریتوبولار
+                            </td>
+                            <td class="p-3.5 text-slate-300">بسیار بالا (~۹۵٪)</td>
+                            <td class="p-3.5 text-rose-400 font-semibold">فاقد کلاژن</td>
+                            <td class="p-3.5 text-slate-400">بر حسب لایه</td>
+                            <td class="p-3.5 text-emerald-400">در لایه‌های عمقی دارد</td>
+                            <td class="p-3.5 text-slate-300">تقویت مکانیکی دیواره لوله</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/40 transition-colors">
+                            <td class="p-3.5 font-bold text-blue-300 flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-blue-400"></span> عاج اینترتوبولار
+                            </td>
+                            <td class="p-3.5 text-slate-300">متوسط تا بالا (بتن مسلح)</td>
+                            <td class="p-3.5 text-emerald-400 font-semibold">داربست متراکم نوع ۱</td>
+                            <td class="p-3.5 text-slate-400">بر حسب لایه</td>
+                            <td class="p-3.5 text-emerald-400 font-bold">بله (در غیاب تخریب)</td>
+                            <td class="p-3.5 text-slate-300">تأمین الاستیسیته و بستر لایه هیبرید</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/40 transition-colors bg-red-950/20">
+                            <td class="p-3.5 font-bold text-red-400 flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span> عاج Infected
+                            </td>
+                            <td class="p-3.5 text-red-300">بسیار پایین (حل شده)</td>
+                            <td class="p-3.5 text-red-400 font-bold">کاملاً دناتوره و تخریب‌شده</td>
+                            <td class="p-3.5 text-red-400 font-bold">متراکم و تهاجمی</td>
+                            <td class="p-3.5 text-red-500 font-black">غیرممکن (ندارد)</td>
+                            <td class="p-3.5 text-red-300">بافت مرده و عفونی؛ <strong class="text-red-400">تراش کامل الزامی</strong></td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/40 transition-colors bg-amber-950/20">
+                            <td class="p-3.5 font-bold text-amber-300 flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> عاج Affected
+                            </td>
+                            <td class="p-3.5 text-amber-200">کاهش یافته (دمینرالیزه)</td>
+                            <td class="p-3.5 text-emerald-400 font-bold">کاملاً سالم و پایدار</td>
+                            <td class="p-3.5 text-emerald-400">منفی یا بسیار ناچیز</td>
+                            <td class="p-3.5 text-emerald-400 font-bold">بسیار بالا</td>
+                            <td class="p-3.5 text-amber-200">بستر بازسازی؛ <strong class="text-amber-400">حفظ جهت مراقبت از پالپ</strong></td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/40 transition-colors">
+                            <td class="p-3.5 font-bold text-sky-300 flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-sky-400"></span> عاج اسکلروتیک
+                            </td>
+                            <td class="p-3.5 text-sky-200">بسیار بالا (هایپرمینرالیزه)</td>
+                            <td class="p-3.5 text-emerald-400">دست‌نخورده</td>
+                            <td class="p-3.5 text-emerald-400">ندارد</td>
+                            <td class="p-3.5 text-sky-400">انجام گرفته (رسوب کامل)</td>
+                            <td class="p-3.5 text-sky-200">کاهش نفوذپذیری عاج و قطع انتشار سموم</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/40 transition-colors">
+                            <td class="p-3.5 font-bold text-purple-300 flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-purple-400"></span> عاج ثالثیه
+                            </td>
+                            <td class="p-3.5 text-purple-200">متغیر (بر اساس واکنشی/ترمیمی)</td>
+                            <td class="p-3.5 text-purple-300">ماتریکس تازه ترشح‌شده</td>
+                            <td class="p-3.5 text-emerald-400">ندارد</td>
+                            <td class="p-3.5 text-purple-300">بافت معدنی فعال</td>
+                            <td class="p-3.5 text-purple-200">افزایش ضخامت دیواره بین ضایعه و پالپ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION 7: Quick Self-Assessment Quiz -->
+        <section class="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-800">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white">خودارزیابی سریع: تست کلینیکی</h3>
+                    <p class="text-xs text-slate-400">یک آزمون ۳۰ ثانیه‌ای برای سنجش تسلط شما بر مفاهیم بالا</p>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800">
+                    <p class="text-xs sm:text-sm font-semibold text-slate-200 mb-3">
+                        سوال: چرا عاج Affected علی‌رغم از دست دادن بخشی از املاح معدنی، کاندید ایده‌آلی برای رمینرالیزاسیون و حفظ در کف حفره است؟
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                        <button onclick="checkQuiz(1, this)" class="quiz-btn text-right p-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition-all border border-slate-700">
+                            الف) چون عاج پریتوبولار در آن سالم مانده است.
+                        </button>
+                        <button onclick="checkQuiz(2, this)" class="quiz-btn text-right p-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition-all border border-slate-700">
+                            ب) چون داربست کلاژن نوع ۱ دست‌نخورده باقی مانده و به عنوان قالب هسته‌زایی عمل می‌کند.
+                        </button>
+                        <button onclick="checkQuiz(3, this)" class="quiz-btn text-right p-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition-all border border-slate-700">
+                            ج) چون باکتری‌ها در آن تبدیل به املاح کلسیم می‌شوند.
+                        </button>
+                        <button onclick="checkQuiz(4, this)" class="quiz-btn text-right p-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition-all border border-slate-700">
+                            د) چون توسط سلول‌های تمایزنیافته پالپ جایگزین شده است.
+                        </button>
+                    </div>
+                    <div id="quiz-feedback" class="mt-3 text-xs hidden p-3 rounded-xl"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-800/80 bg-slate-950 py-6 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+            <span>اطلس آموزشی - بیولوژی دهان و دندانپزشکی ترمیمی</span>
+            <span class="text-slate-400">طراحی مبتنی بر رفرنس‌های معتبر آسیب‌شناسی و مواد دندانی</span>
+        </div>
+    </footer>
+
+    <script>
+        const layerData = {
+            infected: {
+                title: "۱. عاج آلوده (Infected Dentin / Soft Dentin)",
+                badge: "عاج نرم و فاسد",
+                badgeClass: "bg-red-500/20 text-red-400 border border-red-500/40",
+                color: "text-red-400",
+                icon: "fa-skull-crossbones",
+                hardness: "بسیار نرم (با اسکوپ دستی به آسانی ورقه ورقه برداشته می‌شود)",
+                collagenStatus: "تخریب و شکست ساختار مارپیچ سه‌گانه توسط MMPs و پروتئازهای میکروبی (غیرقابل برگشت)",
+                bacterialPresence: "فوق‌العاده بالا؛ تهاجم مستقیم و انباشت کلونی‌های باکتریایی در توبول‌ها",
+                reminPotential: "ناممکن (۰٪) - فقدان ماتریکس برای ته‌نشینی آپاتیت",
+                clinicalDecision: "برداشت کامل الزامی است؛ باقی ماندن آن باعث شکست ترمیم و پیشرفت پوسیدگی می‌شود.",
+                analogy: "دیواری که تیرآهن‌ها و اسکلت فلزی آن در آتش‌سوزی ذوب و نابود شده است."
+            },
+            affected: {
+                title: "۲. عاج متأثر (Affected Dentin / Firm / Leathery Dentin)",
+                badge: "عاج سفت و چرمی",
+                badgeClass: "bg-amber-500/20 text-amber-400 border border-amber-500/40",
+                color: "text-amber-400",
+                icon: "fa-seedling",
+                hardness: "سفت و چرمی (مقاوم به برداشت با اسکوپ دستی؛ فقط با فشار یا فرز برداشته می‌شود)",
+                collagenStatus: "کاملاً سالم و پیوندهای متقاطع آن دست‌نخورده باقی مانده است.",
+                bacterialPresence: "منفی یا بسیار ناچیز (غیرتهاجمی)",
+                reminPotential: "بسیار بالا؛ داربست کلاژنی به عنوان الگو برای جذب یون‌های کلسیم و فسفات عمل می‌کند.",
+                clinicalDecision: "باید حفظ شود؛ پوشش مناسب جهت رمینرالیزاسیون و محافظت پالپ فراهم می‌کند.",
+                analogy: "دیواری که گچ آن ریخته ولی اسکلت فلزی و تیرآهن‌های آن کاملاً سالم و پابرجا هستند."
+            },
+            sclerotic: {
+                title: "۳. عاج اسکلروتیک واکنشی (Sclerotic Dentin / Translucent Zone)",
+                badge: "سد شیشه‌ای هایپرمینرالیزه",
+                badgeClass: "bg-sky-500/20 text-sky-400 border border-sky-500/40",
+                color: "text-sky-400",
+                icon: "fa-gem",
+                hardness: "بسیار سخت (Hard Dentin) و دارای جلای براق در زیر نور مستقیم",
+                collagenStatus: "کاملاً سالم",
+                bacterialPresence: "صفر؛ محیط استریل دفاعی",
+                reminPotential: "فرآیند رمینرالیزاسیون درون توبول‌ها قبلاً توسط ادونتوبلاست‌ها تکمیل شده است.",
+                clinicalDecision: "سد دفاعی طبیعی دندان است؛ به هیچ عنوان نباید تراشیده شود.",
+                analogy: "پر کردن لوله‌های فاضلاب با بتن سنگین برای مسدود کردن مسیر نفوذ سیلاب!"
+            },
+            tertiary: {
+                title: "۴. عاج ثالثیه (Tertiary Dentin / Reactionary & Reparative)",
+                badge: "خط مقدم دفاع پالپ",
+                badgeClass: "bg-purple-500/20 text-purple-400 border border-purple-500/40",
+                color: "text-purple-400",
+                icon: "fa-shield-cat",
+                hardness: "متغیر؛ بسته به نوع واکنشی (سخت‌تر) یا ترمیمی (بی‌نظم‌تر)",
+                collagenStatus: "ماتریکس تازه ترشح شده توسط ادونتوبلاست‌ها یا سلول‌های جایگزین پالپی",
+                bacterialPresence: "فاقد باکتری",
+                reminPotential: "بافت فعال زنده",
+                clinicalDecision: "نشان‌دهنده حیات و دفاع فعال پالپ؛ ساختار حیاتی در حفظ وایتالیتی دندان.",
+                analogy: "دیوارکشی دفاعی جدید در سنگر درونی برای افزایش فاصله با آتش دشمن!"
+            }
+        };
+
+        function selectLayer(layerKey) {
+            const data = layerData[layerKey];
+            const contentBox = document.getElementById('inspector-content');
+
+            // Reset active styles on buttons
+            ['infected', 'affected', 'sclerotic', 'tertiary'].forEach(key => {
+                const btn = document.getElementById('btn-' + key);
+                if (key === layerKey) {
+                    btn.classList.add('ring-2', 'ring-offset-2', 'ring-offset-slate-950');
+                    if (key === 'infected') btn.classList.add('ring-red-500');
+                    if (key === 'affected') btn.classList.add('ring-amber-500');
+                    if (key === 'sclerotic') btn.classList.add('ring-sky-500');
+                    if (key === 'tertiary') btn.classList.add('ring-purple-500');
+                } else {
+                    btn.classList.remove('ring-2', 'ring-offset-2', 'ring-offset-slate-950', 'ring-red-500', 'ring-amber-500', 'ring-sky-500', 'ring-purple-500');
+                }
+            });
+
+            contentBox.innerHTML = `
+                <div class="space-y-4 animate-fadeIn">
+                    <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid ${data.icon} ${data.color} text-lg"></i>
+                            <h4 class="font-bold text-base sm:text-lg text-white">${data.title}</h4>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-full text-xs font-bold ${data.badgeClass}">${data.badge}</span>
+                    </div>
+
+                    <!-- Analogy callout -->
+                    <div class="p-3.5 rounded-2xl bg-slate-950/70 border border-slate-800 text-xs">
+                        <span class="text-slate-400 font-semibold block mb-1">تصویرسازی ذهنی:</span>
+                        <span class="text-slate-200">${data.analogy}</span>
+                    </div>
+
+                    <!-- Grid Parameters -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                        <div class="p-3 rounded-xl bg-slate-900 border border-slate-800/80">
+                            <span class="text-slate-400 block mb-1 font-semibold"><i class="fa-solid fa-gauge-high text-cyan-400 ml-1"></i> قوام بالینی (Hardness):</span>
+                            <span class="text-slate-200">${data.hardness}</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-900 border border-slate-800/80">
+                            <span class="text-slate-400 block mb-1 font-semibold"><i class="fa-solid fa-dna text-blue-400 ml-1"></i> وضعیت کلاژن:</span>
+                            <span class="text-slate-200">${data.collagenStatus}</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-900 border border-slate-800/80">
+                            <span class="text-slate-400 block mb-1 font-semibold"><i class="fa-solid fa-bacterium text-rose-400 ml-1"></i> حضور باکتری:</span>
+                            <span class="text-slate-200">${data.bacterialPresence}</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-900 border border-slate-800/80">
+                            <span class="text-slate-400 block mb-1 font-semibold"><i class="fa-solid fa-wand-magic-sparkles text-emerald-400 ml-1"></i> قابلیت رمینرالیزاسیون:</span>
+                            <span class="text-slate-200 font-bold ${data.color}">${data.reminPotential}</span>
+                        </div>
+                    </div>
+
+                    <!-- Clinical Action Callout -->
+                    <div class="p-4 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-950 border border-slate-700 text-xs text-slate-200">
+                        <div class="font-bold text-white mb-1 flex items-center gap-1.5">
+                            <i class="fa-solid fa-stethoscope text-cyan-400"></i> دستورالعمل کلینیکی و درمانی:
+                        </div>
+                        <p class="leading-relaxed text-slate-300">${data.clinicalDecision}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function checkQuiz(choice, btn) {
+            const feedback = document.getElementById('quiz-feedback');
+            const allBtns = document.querySelectorAll('.quiz-btn');
+            allBtns.forEach(b => b.classList.remove('bg-emerald-600', 'bg-red-600', 'text-white'));
+
+            feedback.classList.remove('hidden', 'bg-emerald-950/70', 'border-emerald-700', 'text-emerald-300', 'bg-red-950/70', 'border-red-700', 'text-red-300');
+
+            if (choice === 2) {
+                btn.classList.add('bg-emerald-600', 'text-white');
+                feedback.classList.add('bg-emerald-950/70', 'border', 'border-emerald-700', 'text-emerald-300');
+                feedback.innerHTML = `<strong><i class="fa-solid fa-circle-check"></i> کاملاً صحیح است!</strong> در عاج Affected، داربست سه‌بعدی کلاژن سالم مانده و مانند اسکلت ساختمان، یون‌های کلسیم و فسفات روی آن هسته‌زایی و رسوب می‌کنند.`;
+            } else {
+                btn.classList.add('bg-red-600', 'text-white');
+                feedback.classList.add('bg-red-950/70', 'border', 'border-red-700', 'text-red-300');
+                feedback.innerHTML = `<strong><i class="fa-solid fa-circle-xmark"></i> نادرست!</strong> گزینه صحیح گزینه (ب) است؛ شرط کلیدی رمینرالیزاسیون، وجود داربست کلاژنی سالم است که به عنوان الگو (Template) عمل می‌کند.`;
+            }
+        }
+
+        // Initialize with Affected dentin selected
+        document.addEventListener('DOMContentLoaded', () => {
+            selectLayer('affected');
+        });
+    </script>
+</body>
+</html>
